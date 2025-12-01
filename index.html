@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEDDLE</title>
+
+  <style>
+    body {
+      font-family: Aptos, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: white;
+    }
+
+    /* HEADER */
+    header {
+      background: url('images/Meddle.jpg') center/cover no-repeat;
+      height: 350px;
+      padding: 0 40px;
+      position: relative;
+      color: white;
+    }
+
+    /* Logo linksboven */
+    .header-logo {
+      width: 100px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    /* Titel bovenaan in het midden */
+    .header-title {
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 50px;
+      margin: 0;
+      text-shadow: 0 0 8px rgba(0,0,0,0.7);
+    }
+
+    /* Social icons + tekst rechtsboven */
+    .social-box {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      text-align: right;
+    }
+
+    .social-text {
+      font-size: 20px;
+      font-weight: bold;
+      text-shadow: 0 0 6px black;
+      margin-bottom: 1px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      justify-content: flex-end;
+    }
+
+    .social-icons img {
+      width: 35px;
+      height: 35px;
+      filter: drop-shadow(0 0 5px rgba(0,0,0,0.7));
+      transition: 0.2s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.12);
+    }
+
+    /* MAIN */
+    main {
+      max-width: 2000px;
+      margin: 5px auto;
+      padding: 50px;
+      background: url('images/Achtergrond.jpg') center/cover no-repeat;
+      border-radius: 10px;
+    }
+	
+
+    /* Container voor klikbare blokken */
+    .info-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 5px;
+      margin-top: 30px;
+    }
+
+    /* Elk info-blok */
+    .info-blok {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 22%;
+      text-decoration: none;
+      color: black;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+
+    .info-blok:hover {
+      transform: scale(1.03);
+    }
+
+    .info-blok img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+    }
+
+    .info-blok h3 {
+      margin: 15px;
+      font-size: 24px;
+      color: #523c25;
+    }
+
+    .info-blok p {
+      margin: 0 15px 20px 15px;
+      color: #333;
+      font-size: 18px;
+    }
+
+/* FOOTER */
+footer {
+  margin-top: 5px;
+  padding: 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* 2 kolommen: links tekst, rechts foto */
+.footer-content {
+  display: flex;
+  height: 250px;        /* pas aan zoals je wil */
+}
+
+/* WITTE LINKERKOLOM */
+.footer-left {
+  width: 25%;
+  background: white;
+  padding: 25px;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center */
+  height: 100%;
+}
+
+
+/* FOTO-RECHTERKOLOM */
+.footer-right {
+  width: 100%;
+  background-image: url("images/MeddleFestival.jpeg");
+  background-position: center 19%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* TEKST ONDERAAN */
+.footer-bottom {
+  text-align: center bottom;
+  padding: 10px;
+  font-size: 20px;
+  color: #444;
+  background: white;
+}
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <img src="images/MeddleLogo.png" class="header-logo" alt="Meddle logo">
+
+    <!-- Social media rechtsboven -->
+    <div class="social-box">
+      <div class="social-text">Check hier onze socials:</div>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/js_meddle/?hl=nl" target="_blank">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+
+        <a href="https://www.facebook.com/JSMEDDLE?locale=nl_NL" target="_blank">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <h2 style="text-align:center; font-size:40px; color:white; text-shadow:0 0 10px black;">
+      <strong>Welkom bij Meddle</strong>
+    </h2>
+
+    <p style="text-align:center; font-size:22px; color:white; max-width:1200px; margin:auto; text-shadow:0 0 8px black;">
+      Meddle is dé feest- en gezelligheidsvereniging van de lage landen.
+      Ontdek onze activiteiten, ledeninformatie en alles wat Meddle zo bijzonder maakt!
+    </p>
+
+    <div class="info-container">
+
+      <!-- OVER MEDDLE -->
+      <a class="info-blok" href="Meddle/OverMeddle.html">
+        <img src="images/OverMeddle.jpg" alt="Over Meddle">
+        <h3>Over Meddle</h3>
+        <p>Lees alles over onze vereniging, de historie en onze doelen.</p>
+      </a>
+
+      <!-- ACTIVITEITEN -->
+      <a class="info-blok" href="Meddle/Activiteiten.html">
+        <img src="images/Activiteiten.jpg" alt="Activiteiten">
+        <h3>Activiteiten</h3>
+        <p>Bekijk alle jaarlijkse evenementen, borrels en feesten inclusief datums en tijden.</p>
+      </a>
+
+      <!-- LID WORDEN -->
+      <a class="info-blok" href="Meddle/LidWorden.html">
+        <img src="images/MeddleSponsor.jpg" alt="Lid worden">
+        <h3>Lid worden</h3>
+        <p>Steun Meddle door lid te worden. Lees hier alles over de voordelen!</p>
+      </a>
+
+      <!-- MEDDLE FESTIVAL -->
+      <a class="info-blok" href="Festival.html">
+        <img src="images/MeddleFest.jpg" alt="MeddleFestival">
+        <h3>Meddle Festival</h3>
+        <p>Kom alles te weten over het jaarlijkse Meddle Festival en bestel tickets!</p>
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-left">
+      <strong>Contactgegevens:</strong><br>
+      JS. Meddle<br>
+      Blijverspolder 4, 2374 AC Oud Ade<br>
+      E-mail: info@meddle.nl
+    </div>
+
+    <div class="footer-right"></div>
+  </div>
+
+  </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meddle Festival</title>
+
+  <style>
+    body {
+      font-family: Aptos, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f6f6f6;
+    }
+
+
+/* HEADER */
+header {
+  background: url('images/Meddle.jpg') center/cover no-repeat;
+
+  height: 350px; /* vaste hoogte zodat de hele foto zichtbaar wordt */
+  padding: 0 40px;
+  position: relative;
+  color: white;
+}
+
+/* Logo linksboven */
+.header-logo {
+  width: 140px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Titel bovenaan in het midden op de foto */
+.header-title {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 50px;
+  margin: 0;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+
+
+
+    nav a {
+      margin: 0 20px;
+      color: white;
+      font-size: 30px;
+      text-decoration: none;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 2000px;
+      margin: 5px auto;
+      padding: 50px;
+      background: url('images/Achtergrond.jpg') center/cover no-repeat;
+      border-radius: 10px;
+    }
+
+    /* Tickets button */
+    .ticket-btn {
+      display: inline-block;
+      background: #caa66b;
+      color: black;
+      padding: 18px 35px;
+      font-size: 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    /* Container voor de 3 blokken */
+    .info-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 45px;
+      margin-top: 30px;
+    }
+
+    /* Elk info-blok */
+    .info-blok {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 32%;
+      text-decoration: none;
+      color: black;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+
+    .info-blok:hover {
+      transform: scale(1.03);
+    }
+
+    .info-blok img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .info-blok h3 {
+      margin: 15px;
+      font-size: 26px;
+      color: #523c25;
+    }
+
+    .info-blok p {
+      margin: 0 15px 20px 15px;
+      color: #333;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+	<header>
+  <img src="images/FestivalLogo.png" class="header-logo" alt="Festival logo">
+
+  <h1 class="header-title">Meddle Festival 2026</h1>
+	</header>
+
+
+
+  <!-- MAIN -->
+  <main>
+
+    <div style="text-align:center;">
+      <a href="https://shop.justtickets.nl/shop/9878/Meddle_Festival_2025" target="_blank" class="ticket-btn">
+  🎟 Scoor hier je tickets!
+</a>
+
+    </div>
+
+<div class="info-container">
+
+  <!-- OVER ONS -->
+  <a class="info-blok" href="Festival/Overons.html">
+    <img src="images/Barmensen.jpg" alt="Over ons foto">
+    <h3>Over Meddle Festival</h3>
+    <p>Lees alles over het Meddle Festival, de geschiedenis en wat ons uniek maakt.</p>
+  </a>
+
+  <!-- FOTO'S -->
+  <a class="info-blok" href="Festival/Foto's.html">
+    <img src="images/Apen.jpg" alt="Foto's">
+    <h3>Foto's</h3>
+    <p>Bekijk de sfeerbeelden van vorige edities en ontdek hoe gezellig het is!</p>
+  </a>
+
+
+  <!-- SPONSORING -->
+  <a class="info-blok" href="Festival/ECHTESPONSOR.html">
+    <img src="images/Sponsor.jpg" alt="Sponsoring">
+    <h3>Sponsoring</h3>
+    <p>Bekijk de sponsorpakketten en steun het Meddle Festival 2026!</p>
+  </a>
+
+  <!-- TimeTable -->
+  <a class="info-blok" href="Festival/TimeTable.html">
+    <img src="images/ProgrammaMeddle.jpg" alt="Sponsoring">
+    <h3>Programma</h3>
+    <p>Bekijk hier het volledige programma van ons prachtige weekend!</p>
+  </a>
+</div>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © Website Meddle Festival 2026 
+	<p>
+    Je kunt ons bereiken via: <strong>festival@meddle.nl</strong>
+  </footer>
+
+</body>
+</html>
