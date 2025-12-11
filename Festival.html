@@ -6,188 +6,129 @@
   <title>Meddle Festival</title>
 
   <style>
-    body {
-      font-family: Aptos, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f6f6f6;
+    * { box-sizing: border-box; }
+    body { font-family: Aptos, sans-serif; margin:0; padding:0; background:#f6f6f6; }
+
+    header {
+      background: url('images/Meddle.jpg') center/cover no-repeat;
+      height:350px;
+      padding:0 40px;
+      position:relative;
+      color:white;
     }
 
+    .header-logo { width:140px; position:absolute; top:20px; left:20px; }
+    .header-title { position:absolute; top:25px; left:50%; transform:translateX(-50%); font-size:50px; margin:0; text-shadow:0 0 8px rgba(0,0,0,0.7); }
 
-/* HEADER */
-header {
-  background: url('images/Meddle.jpg') center/cover no-repeat;
-
-  height: 350px; /* vaste hoogte zodat de hele foto zichtbaar wordt */
-  padding: 0 40px;
-  position: relative;
-  color: white;
-}
-
-/* Logo linksboven */
-.header-logo {
-  width: 140px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-/* Titel bovenaan in het midden op de foto */
-.header-title {
-  position: absolute;
-  top: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 50px;
-  margin: 0;
-  text-shadow: 0 0 8px rgba(0,0,0,0.7);
-}
-
-
-
-
-    nav a {
-      margin: 0 20px;
-      color: white;
-      font-size: 30px;
-      text-decoration: none;
+    .social-block {
+      position:absolute; top:18px; right:22px; text-align:right; display:flex; flex-direction:column; gap:8px; z-index:50; align-items:flex-end;
     }
+    .social-top { display:flex; align-items:center; gap:12px; white-space:nowrap; justify-content:flex-end; }
+    .social-text { font-size:16px; font-weight:700; color:white; text-shadow:0 0 6px rgba(0,0,0,0.7); }
+    .social-icons-inline { display:flex; gap:8px; align-items:center; }
+    .social-icons-inline img { width:30px; height:30px; object-fit:contain; filter:drop-shadow(0 0 4px rgba(0,0,0,0.6)); transition:transform .15s; }
+    .contact-btn { display:inline-block; padding:8px 14px; background:rgba(255,255,255,0.95); color:#111; text-decoration:none; font-weight:700; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); font-size:14px; }
+    .contact-btn:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.18); }
 
-    /* MAIN */
-    main {
-      max-width: 2000px;
-      margin: 5px auto;
-      padding: 50px;
-      background: url('images/Achtergrond.jpg') center/cover no-repeat;
-      border-radius: 10px;
-    }
+    main { max-width:2000px; margin:5px auto; padding:50px; background: url('images/Achtergrond.jpg') center/cover no-repeat; border-radius:10px; }
 
-    /* Tickets button */
-    .ticket-btn {
-      display: inline-block;
-      background: #caa66b;
-      color: black;
-      padding: 18px 35px;
-      font-size: 32px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 40px;
-    }
+    .ticket-btn { display:inline-block; background:#caa66b; color:black; padding:18px 35px; font-size:32px; border-radius:10px; text-decoration:none; font-weight:bold; margin-bottom:40px; }
 
-    /* Container voor de 3 blokken */
-    .info-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 45px;
-      margin-top: 30px;
-    }
+    .info-container { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; margin-top:30px; }
+    .info-blok { background:#fff; border-radius:10px; overflow:hidden; width:32%; min-width:180px; text-decoration:none; color:black; box-shadow:0 0 10px rgba(0,0,0,0.08); transition:transform .18s; display:block; }
+    .info-blok:hover { transform:translateY(-6px); }
+    .info-blok img { width:100%; height:180px; object-fit:cover; display:block; }
+    .info-blok h3 { margin:15px; font-size:26px; color:#523c25; }
+    .info-blok p { margin:0 15px 20px 15px; color:#333; font-size:18px; }
 
-    /* Elk info-blok */
-    .info-blok {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      width: 32%;
-      text-decoration: none;
-      color: black;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      transition: 0.2s;
-    }
+    footer { text-align:center; padding:15px; margin-top:15px; color:#555; }
 
-    .info-blok:hover {
-      transform: scale(1.03);
-    }
+    /* responsive */
+    @media (max-width:1100px) { .info-blok { width:48%; } } /* tablet -> 2 kolommen */
+    @media (max-width:780px) {
+      header { padding:20px 15px 100px; background-position:center; }
+      .header-logo { width:60px; top:10px; left:10px; }
+      .header-title { font-size:32px; margin-top:40px; }
+      .social-block { top:10px; right:10px; gap:6px; }
+      .social-text { font-size:13px; }
+      .social-icons-inline img { width:22px; height:22px; }
+      .contact-btn { padding:6px 8px; font-size:12px; }
 
-    .info-blok img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .info-blok h3 {
-      margin: 15px;
-      font-size: 26px;
-      color: #523c25;
-    }
-
-    .info-blok p {
-      margin: 0 15px 20px 15px;
-      color: #333;
-      font-size: 18px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      margin-top: 15px;
-      color: #555;
+      main { padding:20px; }
+      .info-container { justify-content:center; gap:12px; }
+      .info-blok { width:48%; max-width:460px; min-width:140px; }
+      .info-blok img { height:160px; }
+      .info-blok h3 { font-size:20px; margin:12px; }
+      .info-blok p { font-size:15px; margin-bottom:16px; }
     }
   </style>
 </head>
 
 <body>
+  <header>
+    <img src="images/MF_logo26-WIT.png" class="header-logo" alt="Festival logo">
+    <h1 class="header-title">Meddle Festival 2026</h1>
 
-  <!-- HEADER -->
-	<header>
-  <img src="images/FestivalLogo.png" class="header-logo" alt="Festival logo">
+    <div class="social-block">
+      <div class="social-top">
+        <span class="social-text">Check hier onze socials:</span>
+        <span class="social-icons-inline">
+          <a href="https://www.instagram.com/js_meddle/?hl=nl" target="_blank" aria-label="Instagram">
+            <img src="images/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/JSMEDDLE?locale=nl_NL" target="_blank" aria-label="Facebook">
+            <img src="images/facebook.png" alt="Facebook">
+          </a>
+        </span>
+      </div>
 
-  <h1 class="header-title">Meddle Festival 2026</h1>
-	</header>
+      <div class="social-bottom">
+        <span class="social-text">Neem contact met ons op:</span>
+        <a class="contact-btn" href="Festival/ContactFestival.html">Contact</a>
+      </div>
 
+      <div class="social-bottom">
+        <span class="social-text">Check hier de Meddle website:</span>
+        <a class="contact-btn" href="index.html" target="_blank">Website</a>
+      </div>
+    </div>
+  </header>
 
-
-  <!-- MAIN -->
   <main>
-
     <div style="text-align:center;">
-      <a href="https://shop.justtickets.nl/shop/9878/Meddle_Festival_2025" target="_blank" class="ticket-btn">
-  🎟 Scoor hier je tickets!
-</a>
-
+      <a href="https://shop.justtickets.nl/shop/9878/Meddle_Festival_2025" target="_blank" class="ticket-btn">🎟 Scoor hier je tickets!</a>
     </div>
 
-<div class="info-container">
+    <div class="info-container">
+      <a class="info-blok" href="Festival/OverMeddleFestival.html">
+        <img src="images/Barmensen.jpg" alt="Over ons foto">
+        <h3>Over Meddle Festival</h3>
+        <p>Lees alles over het Meddle Festival, de geschiedenis en wat ons uniek maakt.</p>
+      </a>
 
-  <!-- OVER ONS -->
-  <a class="info-blok" href="Festival/Overons.html">
-    <img src="images/Barmensen.jpg" alt="Over ons foto">
-    <h3>Over Meddle Festival</h3>
-    <p>Lees alles over het Meddle Festival, de geschiedenis en wat ons uniek maakt.</p>
-  </a>
+      <a class="info-blok" href="Festival/Foto's.html">
+        <img src="images/Apen.jpg" alt="Foto's">
+        <h3>Foto's</h3>
+        <p>Bekijk de sfeerbeelden van vorige edities en ontdek hoe gezellig het is!</p>
+      </a>
 
-  <!-- FOTO'S -->
-  <a class="info-blok" href="Festival/Foto's.html">
-    <img src="images/Apen.jpg" alt="Foto's">
-    <h3>Foto's</h3>
-    <p>Bekijk de sfeerbeelden van vorige edities en ontdek hoe gezellig het is!</p>
-  </a>
+      <a class="info-blok" href="Festival/Sponsoring.html">
+        <img src="images/Sponsor.jpg" alt="Sponsoring">
+        <h3>Sponsoring</h3>
+        <p>Bekijk de sponsorpakketten en steun het Meddle Festival 2026!</p>
+      </a>
 
-
-  <!-- SPONSORING -->
-  <a class="info-blok" href="Festival/ECHTESPONSOR.html">
-    <img src="images/Sponsor.jpg" alt="Sponsoring">
-    <h3>Sponsoring</h3>
-    <p>Bekijk de sponsorpakketten en steun het Meddle Festival 2026!</p>
-  </a>
-
-  <!-- TimeTable -->
-  <a class="info-blok" href="Festival/TimeTable.html">
-    <img src="images/ProgrammaMeddle.jpg" alt="Sponsoring">
-    <h3>Programma</h3>
-    <p>Bekijk hier het volledige programma van ons prachtige weekend!</p>
-  </a>
-</div>
-
-
+      <a class="info-blok" href="Festival/TimeTable.html">
+        <img src="images/ProgrammaMeddle.jpg" alt="Programma">
+        <h3>Programma</h3>
+        <p>Bekijk hier het volledige programma van ons prachtige weekend!</p>
+      </a>
+    </div>
   </main>
 
-  <!-- FOOTER -->
   <footer>
-    © Website Meddle Festival 2026 
-	<p>
-    Je kunt ons bereiken via: <strong>festival@meddle.nl</strong>
+    © Website Meddle Festival 2026
+    <p>Je kunt ons bereiken via: <strong>festival@meddle.nl</strong></p>
   </footer>
-
 </body>
 </html>
