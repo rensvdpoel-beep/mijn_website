@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Over ons – Meddle Festival</title>
+
+  <style>
+    body {
+      font-family: Aptos, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f6f6f6;
+    }
+
+    /* HEADER */
+    header {
+      background: url('../images/Meddle.jpg') center/cover no-repeat;
+      padding: 40px 20px 160px; /* extra onderruimte zodat menu goed past */
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .header-logo {
+      width: 120px;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .header-title {
+      font-size: 50px;
+      margin-top: 40px;
+      text-shadow: 0 0 8px rgba(0,0,0,0.7);
+    }
+
+    /* SUBNAV BAR */
+    .subnav {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .subnav a {
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 0 6px rgba(0,0,0,0.6);
+      transition: 0.2s;
+    }
+
+    .subnav a:hover {
+      color: #f8d78b;
+    }
+	
+	/* social + contact rechtsboven (inline icons + contact-knop eronder) */
+.social-block {
+  position: absolute;
+  top: 18px;          /* afstand vanaf top - pas aan indien nodig */
+  right: 22px;        /* afstand vanaf rechts - pas aan */
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;           /* ruimte tussen icons-regel en knop */
+  z-index: 50;
+}
+
+/* bovenste regel: tekst + icons inline */
+.social-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+/* tekst */
+.social-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+/* icon container inline */
+.social-icons-inline a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* icon styling */
+.social-icons-inline img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+  transition: transform .15s ease;
+}
+
+.social-icons-inline a:hover img {
+  transform: scale(1.12);
+}
+
+/* onderliggende contact knop */
+.social-bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* contact knop styling */
+.contact-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* kleiner scherm aanpassingen */
+@media (max-width: 820px) {
+  .social-block {
+    right: 12px;
+    top: 14px;
+  }
+  .social-text { font-size: 14px; }
+  .social-icons-inline img { width: 26px; height: 26px; }
+  .contact-btn { padding: 6px 10px; font-size: 13px; }
+}
+
+.contact-btn {
+  margin-left: 10px; /* meer of minder naar wens */
+}
+
+    /* MAIN */
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 40px;
+      background: white;
+      border-radius: 12px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="../images/MF_logo26-WIT.png" class="header-logo">
+    <h1 class="header-title"><strong>Over Meddle Festival</h1>
+
+    <nav class="subnav">
+      <a href="../Festival.html">Home</a>
+      <a href="Foto's.html">Foto's</a>
+      <a href="Sponsoring.html">Sponsoring</a>
+	  <a href="TimeTable.html">Programma</a>
+      <a href="https://shop.justtickets.nl/shop/9878/Meddle_Festival_2025" target="_blank">
+        Tickets
+      </a>
+    </nav>
+	
+<!-- social + contact (plaats in <header>, vervang bestaande social-box) -->
+<div class="social-block">
+  <div class="social-top">
+    <span class="social-text">Check hier onze socials:</span>
+    <span class="social-icons-inline">
+      <a href="https://www.instagram.com/js_meddle/?hl=nl" target="_blank" aria-label="Instagram">
+        <img src="../images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/JSMEDDLE?locale=nl_NL" target="_blank" aria-label="Facebook">
+        <img src="../images/facebook.png" alt="Facebook">
+      </a>
+    </span>
+  </div>
+
+  <div class="social-bottom">
+    <span class="social-text">Neem contact met ons op:</span>
+    <a class="contact-btn" href="../Festival/ContactFestival.html">Contact</a>
+  </div>
+</div>
+  </header>
+
+  <main>
+    <h2>Wie zijn wij?</h2>
+    <p>
+      Het Meddle Festival is een jaarlijks terugkerend evenement vol muziek, sfeer
+      en gezelligheid. Wat ooit begon als een klein buurtfeest, is uitgegroeid
+      tot een festival waar duizenden mensen op afkomen.
+    </p>
+    <p>
+      Onze passie is het creëren van een plek waar iedereen samenkomt om te genieten,
+      te dansen en mooie herinneringen te maken.
+    </p>
+
+    <h2>Onze missie</h2>
+    <p>
+      Een betaalbaar, sfeervol en gastvrij festival neerzetten waar elke bezoeker
+      zich welkom voelt.
+    </p>
+  </main>
+
+  <footer>
+    © 2025 Meddle Festival — Contact: festival@meddle.nl
+  </footer>
+
+</body>
+</html>
