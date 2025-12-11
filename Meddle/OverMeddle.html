@@ -6,14 +6,9 @@
   <title>Over Meddle</title>
 
   <style>
-    body {
-      font-family: Aptos, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f6f6f6;
-    }
+    * { box-sizing: border-box; }
+    body { font-family: Aptos, sans-serif; margin:0; padding:0; background:#f6f6f6; }
 
-    /* HEADER */
     header {
       background: url('../images/Meddle.jpg') center/cover no-repeat;
       padding: 40px 20px 160px;
@@ -22,74 +17,108 @@
       color: white;
     }
 
-    .header-logo {
-      width: 80px;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-
-    .header-title {
-      font-size: 50px;
-      margin-top: 40px;
-      text-shadow: 0 0 8px rgba(0,0,0,0.7);
-    }
+    .header-logo { width:80px; position:absolute; top:20px; left:20px; }
+    .header-title { font-size:50px; margin-top:40px; text-shadow:0 0 8px rgba(0,0,0,0.7); }
 
     .subnav {
-      margin-top: 25px;
-      display: flex;
-      justify-content: center;
-      gap: 50px;
+      margin-top:25px;
+      display:flex;
+      justify-content:center;
+      gap:50px;
+      flex-wrap:wrap;
     }
-
     .subnav a {
-      color: white;
-      font-size: 28px;
-      font-weight: bold;
-      text-decoration: none;
-      text-shadow: 0 0 6px rgba(0,0,0,0.6);
-      transition: 0.2s;
+      color:white; font-size:28px; font-weight:700; text-decoration:none; text-shadow:0 0 6px rgba(0,0,0,0.6);
     }
+    .subnav a:hover { color:#f8d78b; }
 
-    .subnav a:hover {
-      color: #f8d78b;
+    .social-block {
+      position:absolute; top:18px; right:22px; text-align:right; display:flex; flex-direction:column; gap:8px; z-index:50; align-items:flex-end;
     }
+    .social-top { display:flex; align-items:center; gap:12px; white-space:nowrap; justify-content:flex-end; }
+    .social-text { font-size:16px; font-weight:700; color:white; text-shadow:0 0 6px rgba(0,0,0,0.7); }
+    .social-icons-inline { display:flex; gap:8px; align-items:center; }
+    .social-icons-inline img { width:30px; height:30px; object-fit:contain; filter:drop-shadow(0 0 4px rgba(0,0,0,0.6)); transition:transform .15s; }
+    .contact-btn { display:inline-block; padding:8px 14px; background:rgba(255,255,255,0.95); color:#111; text-decoration:none; font-weight:700; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.15); font-size:14px; }
+    .contact-btn:hover { transform:translateY(-2px); box-shadow:0 6px 18px rgba(0,0,0,0.18); }
 
-    main {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 40px;
-      background: white;
-      border-radius: 12px;
-    }
+    main { max-width:1200px; margin:40px auto; padding:40px; background:white; border-radius:12px; }
 
-    p {
-      font-size: 20px;
-      line-height: 1.6;
+    p { font-size:17px; line-height:1.45; color:#222; }
+
+    .main-grid { display:grid; grid-template-columns: 1fr 380px; gap:50px; align-items:start; }
+    .main-photos img { width:100%; border-radius:12px; margin-bottom:20px; box-shadow:0 4px 12px rgba(0,0,0,0.15); display:block; }
+
+    @media (max-width:900px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .subnav { gap:18px; }
+      .subnav a { font-size:20px; }
+      header { padding:30px 15px 120px; }
+      .header-title { font-size:34px; }
+      .social-top { gap:8px; }
+      .social-icons-inline img { width:22px; height:22px; }
+      .contact-btn { padding:6px 8px; font-size:12px; }
+      main { padding:20px; }
     }
   </style>
 </head>
 
 <body>
-
   <header>
-    <img src="../images/MeddleLogo.png" class="header-logo">
+    <img src="../images/MeddleLogo.png" class="header-logo" alt="logo">
     <h1 class="header-title"><strong>Over Meddle</strong></h1>
 
     <nav class="subnav">
-      <a href="../meddle.html">Home</a>
+      <a href="../index.html">Home</a>
       <a href="Activiteiten.html">Activiteiten</a>
       <a href="LidWorden.html">Lid worden</a>
       <a href="../festival.html">Meddle Festival</a>
     </nav>
+
+    <div class="social-block">
+      <div class="social-top">
+        <span class="social-text">Check hier onze socials:</span>
+        <span class="social-icons-inline">
+          <a href="https://www.instagram.com/js_meddle/?hl=nl" target="_blank" aria-label="Instagram">
+            <img src="../images/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/JSMEDDLE?locale=nl_NL" target="_blank" aria-label="Facebook">
+            <img src="../images/facebook.png" alt="Facebook">
+          </a>
+        </span>
+      </div>
+
+      <div class="social-bottom">
+        <span class="social-text">Neem contact met ons op:</span>
+        <a class="contact-btn" href="../Meddle/Contact.html">Contact</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <h2>Over Meddle</h2>
-    <p> (Hier een leuk stukje over wat Meddle is, misschien een stukje geschiedenis en over de renovatie met wat foto's).</p>
-	
+    <div class="main-grid">
+      <div class="main-text">
+        <h2>Geschiedenis:</h2>
+        <p>
+          Begin jaren 70 had een vriendengroep [...] (jouw tekst blijft hetzelfde)
+        </p>
 
+        <h2>Feesten in Meddle:</h2>
+        <p>
+          Jaarlijks wordt er op het terrein rondom het gebouw van Meddle natuurlijk het <strong>Meddle Festival</strong> gehouden.
+        </p>
+
+        <h2>Meddle Nu:</h2>
+        <p>...</p>
+      </div>
+
+      <div class="main-photos">
+        <img src="../images/locatie.jpg" alt="Foto vroeger">
+        <img src="../images/.jpg" alt="Foto">
+        <img src="../images/.jpg" alt="Foto">
+        <img src="../images/.jpg" alt="Foto">
+      </div>
+    </div>
   </main>
-
 </body>
 </html>
