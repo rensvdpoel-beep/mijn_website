@@ -53,7 +53,94 @@
     .subnav a:hover {
       color: #f8d78b;
     }
+	
+	
+	/* social + contact rechtsboven (inline icons + contact-knop eronder) */
+.social-block {
+  position: absolute;
+  top: 18px;          /* afstand vanaf top - pas aan indien nodig */
+  right: 22px;        /* afstand vanaf rechts - pas aan */
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;           /* ruimte tussen icons-regel en knop */
+  z-index: 50;
+}
 
+/* bovenste regel: tekst + icons inline */
+.social-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+/* tekst */
+.social-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
+}
+
+/* icon container inline */
+.social-icons-inline a {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* icon styling */
+.social-icons-inline img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+  transition: transform .15s ease;
+}
+
+.social-icons-inline a:hover img {
+  transform: scale(1.12);
+}
+
+/* onderliggende contact knop */
+.social-bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* contact knop styling */
+.contact-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* kleiner scherm aanpassingen */
+@media (max-width: 820px) {
+  .social-block {
+    right: 12px;
+    top: 14px;
+  }
+  .social-text { font-size: 14px; }
+  .social-icons-inline img { width: 26px; height: 26px; }
+  .contact-btn { padding: 6px 10px; font-size: 13px; }
+}
+
+.contact-btn {
+  margin-left: 10px; /* meer of minder naar wens */
+}
     main {
       max-width: 1200px;
       margin: 40px auto;
@@ -83,11 +170,31 @@
     <h1 class="header-title"><strong>Lid worden</strong></h1>
 
     <nav class="subnav">
-      <a href="../meddle.html">Home</a>
+      <a href="../index.html">Home</a>
       <a href="OverMeddle.html">Over Meddle</a>
       <a href="Activiteiten.html">Activiteiten</a>
       <a href="../festival.html">Meddle Festival</a>
     </nav>
+	
+<!-- social + contact (plaats in <header>, vervang bestaande social-box) -->
+<div class="social-block">
+  <div class="social-top">
+    <span class="social-text">Check hier onze socials:</span>
+    <span class="social-icons-inline">
+      <a href="https://www.instagram.com/js_meddle/?hl=nl" target="_blank" aria-label="Instagram">
+        <img src="../images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/JSMEDDLE?locale=nl_NL" target="_blank" aria-label="Facebook">
+        <img src="../images/facebook.png" alt="Facebook">
+      </a>
+    </span>
+  </div>
+
+  <div class="social-bottom">
+    <span class="social-text">Neem contact met ons op:</span>
+    <a class="contact-btn" href="../Meddle/Contact.html">Contact</a>
+  </div>
+</div>
   </header>
 
   <main>
@@ -97,7 +204,7 @@
       wat ze krijgen, voordelen, feesten, kortingen, gezelligheid etc.)
     </p>
 
-    <a class="btn" href="https://forms.office.com/Pages/ShareFormPage.aspx?id=ovEO973C9UactKYL83TNUZisxHunxzxMlh_e2iLnCVtUOUVFVVJLQzEwMjQ5TloyT1JUMVRGT0VLSC4u&sharetoken=yvWzdN7lmLvmcGtMvtYp&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleAOSwAZleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAacW_68gL-aQacYJ5t3RJb1p2EmYoqTKmJjIDfWhBg8Cs0eGGDgGnB-mjsc9MA_aem_YZ8MDlpqlLnIeclSY_j0ew" target="_blank">
+    <a class="btn" href="https://app.clubcollect.com/signup/4a9865da-3490-4839-ad9a-49c58c0bf1e5" target="_blank">
       Word hier lid
     </a>
   </main>
