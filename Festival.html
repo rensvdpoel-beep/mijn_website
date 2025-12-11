@@ -40,6 +40,45 @@
     .info-blok img { width:100%; height:180px; object-fit:cover; display:block; }
     .info-blok h3 { margin:15px; font-size:26px; color:#523c25; }
     .info-blok p { margin:0 15px 20px 15px; color:#333; font-size:18px; }
+	
+	
+	/* ===== FIX FESTIVAL DESKTOP: 4 BLOKKEN ===== */
+@media (min-width: 900px) {
+  .info-container {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 30px !important;
+    justify-content: center !important;
+  }
+
+  .info-blok {
+    width: 100% !important;
+  }
+}
+
+
+/* ===== FIX FESTIVAL LOGO OP MOBIEL ===== */
+@media (max-width: 780px) {
+  .header-logo {
+    width: 65px !important;   /* zelfde form factor als hoofdsite */
+    top: 15px !important;
+    left: 15px !important;
+  }
+}
+
+
+/* ===== FIX TITEL CENTREREN OP MOBIEL ===== */
+@media (max-width: 780px) {
+  .header-title {
+    font-size: 32px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    top: 70px !important;    /* iets naar beneden zodat het mooi staat */
+    text-align: center !important;
+    width: 100% !important;
+  }
+}
+
 
     footer { text-align:center; padding:15px; margin-top:15px; color:#555; }
 
