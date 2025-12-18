@@ -155,7 +155,30 @@
     p {
       font-size: 20px;
       line-height: 1.6;
+	  font-weight: 400;
     }
+	
+	.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 50px;
+  align-items: start;
+}
+
+.main-photos img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
     footer {
       text-align: center;
@@ -203,21 +226,40 @@
   </header>
 
   <main>
-    <h2>Wie zijn wij?</h2>
-    <p>
-      Het Meddle Festival is een jaarlijks terugkerend evenement vol muziek, sfeer
-      en gezelligheid. Wat ooit begon als een klein buurtfeest, is uitgegroeid
-      tot een festival waar duizenden mensen op afkomen.
-    </p>
-    <p>
-      Onze passie is het creëren van een plek waar iedereen samenkomt om te genieten,
-      te dansen en mooie herinneringen te maken.
-    </p>
+  <div class="main-grid">
 
-    <h2>Onze missie</h2>
-    <p>
-      Een betaalbaar, sfeervol en gastvrij festival neerzetten waar elke bezoeker
-      zich welkom voelt.
+    <!-- LINKERKANT: TEKST -->
+    <div class="main-text">
+      <h2>Wie zijn wij?</h2>
+      <p>
+        Het Meddle Festival is een jaarlijks terugkerend evenement vol muziek, sfeer
+        en gezelligheid. Wat ooit begon als een klein buurtfeest, is uitgegroeid
+        tot een festival waar duizenden mensen op afkomen.
+      </p>
+      <p>
+        Onze passie is het creëren van een plek waar iedereen samenkomt om te genieten,
+        te dansen en mooie herinneringen te maken.
+      </p>
+
+      <h2>Onze missie</h2>
+      <p>
+        Een betaalbaar, sfeervol en gastvrij festival neerzetten waar elke bezoeker
+        zich welkom voelt. Met een gevarieerd programma, sterke live-acts en een
+        gezellige festivalsfeer zorgen we elk jaar voor een onvergetelijke ervaring.
+      </p>
+    </div>
+
+    <!-- RECHTERKANT: FOTO'S -->
+    <div class="main-photos">
+      <img src="../images/Meddle.jpg" alt="Festival sfeer">
+      <img src="../images/Meddle.jpg" alt="Publiek">
+      <img src="../images/Meddle.jpg" alt="Podium">
+      <img src="../images/Meddle.jpg" alt="Avond sfeer">
+    </div>
+
+  </div>
+</main>
+
     </p>
   </main>
 
