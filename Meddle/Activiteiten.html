@@ -149,23 +149,32 @@
       border-radius: 12px;
     }
 	
-		@media (max-width: 780px) {
-  .header-logo {
-    width: 55px !important;
-    top: 10px !important;
-    left: 10px !important;
+@media (max-width: 900px) {
+  .subnav { gap:18px; }
+  .subnav a { font-size:20px; }
+  header { padding:30px 15px 120px; }
+  .header-title { font-size:34px; }
+  main { padding:20px; }
+
+  .event {
+    flex-direction: column;
+    text-align: center;
   }
-  
-      @media (max-width:900px) {
-      .main-grid { grid-template-columns: 1fr; }
-      .subnav { gap:18px; }
-      .subnav a { font-size:20px; }
-      header { padding:30px 15px 120px; }
-      .header-title { font-size:34px; }
-      .social-top { gap:8px; }
-      .social-icons-inline img { width:22px; height:22px; }
-      .contact-btn { padding:6px 8px; font-size:12px; }
-      main { padding:20px; }
+
+  .event img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 780px) {
+  .header-logo {
+    width: 55px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
 
     /* ---------- NIEUWE EVENT-STYLING MET FOTO'S ---------- */
 
