@@ -209,6 +209,12 @@
       margin: 5px 0 0;
       font-size: 18px;
     }
+	.event {
+  text-decoration: none;
+  color: inherit;
+  display: flex; /* belangrijk omdat het nu een <a> is */
+}
+
 	
 	footer {
   text-align: center;
@@ -258,15 +264,17 @@
   <main>
     <h2>Agenda 2025/2026</h2>
 
-    <!-- ACTIVITEIT 1 -->
-    <div class="event">
-      <img src="../images/Nieuwjaar.jpg" alt="Feestavond">
-      <div class="event-text">
-        <h3>Heropening Meddle – 2026</h3>
-        <p>Kom als nieuwe leden proosten bij de heropening van Meddle.</p>
-		<p>Onder het genot van een drankje en muziek kunt u genieten van het gerenoveerde Meddle.</p>
-      </div>
-    </div>
+<!-- ACTIVITEIT 1 -->
+<a href="Activiteiten.html" class="event">
+  <img src="../images/Nieuwjaar.jpg" alt="Feestavond">
+  
+  <div class="event-text">
+    <h3>Heropening Meddle – 2026</h3>
+    <p>Kom als nieuwe leden proosten bij de heropening van Meddle.</p>
+    <p>Onder het genot van een drankje en muziek kunt u genieten van het gerenoveerde Meddle.</p>
+  </div>
+</a>
+
 
   </main>
 
