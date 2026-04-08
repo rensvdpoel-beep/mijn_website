@@ -215,6 +215,36 @@
   display: flex; /* belangrijk omdat het nu een <a> is */
 }
 
+.event {
+  background: #fafafa;
+  border-left: 5px solid #caa66b;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.event:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+/* Klik tekst opvallender maken */
+.event-text p:last-child {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #caa66b;
+}
+
+
 	
 	footer {
   text-align: center;
@@ -272,6 +302,13 @@
     <h3>Heropening Meddle 18 April 2026</h3>
     <p>Kom gezellig proosten bij de heropening van Meddle.</p>
     <p>Onder het genot van een drankje en muziek kunt u genieten van het gerenoveerde Meddle.</p>
+<p style="margin-top:10px;">
+  <span style="background:#caa66b;color:white;padding:6px 12px;border-radius:6px;">
+    Klik hier voor meer informatie! →
+  </span>
+</p>
+
+
   </div>
 </a>
 
