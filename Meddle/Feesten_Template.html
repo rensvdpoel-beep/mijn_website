@@ -163,12 +163,48 @@ footer {
 
 /* MOBIEL */
 @media (max-width: 800px) {
-  .event-detail {
-    flex-direction: column;
-  }
 
   .header-title {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  /* NAV netjes onder elkaar */
+  .subnav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .subnav a {
+    font-size: 18px;
+  }
+
+  /* Social blok niet meer rechtsboven forceren */
+  .social-block {
+    position: static;
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .social-top,
+  .social-bottom {
+    justify-content: center;
+  }
+
+  /* Logo iets kleiner en minder dominant */
+  .header-logo {
+    width: 50px;
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  header {
+    padding: 20px 15px 60px;
+  }
+
+  .event-detail {
+    flex-direction: column;
   }
 
   main {
@@ -176,6 +212,7 @@ footer {
     padding: 20px;
   }
 }
+
 
 </style>
 </head>
@@ -261,6 +298,10 @@ footer {
     &nbsp;|&nbsp;
     <a href="../privacy/Statuten_Societeit_Meddle.pdf" target="_blank" style="color:#000; text-decoration:underline;">
       Statuten
+    </a>
+	    &nbsp;|&nbsp;
+    <a href="../privacy/Gedragsregels_Societeit_MEDDLE.pdf" target="_blank" style="color:#000; text-decoration:underline;">
+      Gedragsregels
     </a>
   </p>
 </footer>
